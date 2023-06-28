@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Check if a host is on the network by pinging it
+
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 {IP_ADDRESS}"
+  exit 1
+fi
+
+ping -c 5 "$1"
